@@ -15,6 +15,8 @@
 
 </head>
 <body>
+    <!--Google map-->
+    
     <div id="language-but">
         <button id="vn-language-but"><a href="./index.html">
            <img src="./assets/img/co/vietnam-logo.jpg" alt="">
@@ -165,12 +167,19 @@
 
                     <!--Places-->
                     <div class="places-list">
+                        
                         <div class="place-item">
-                            <img src="./assets/img/menu_MF/menu (2).jpg" alt="Khai Vị" class="place-img js-place-img">
+                            <a href="">
+                                Chi tiết
+                            </a>
+                            <img  src="./assets/img/menu_MF/menu (2).jpg" alt="Khai Vị" class="place-img js-place-img">
+                            
                             <div class="place-body">
                                 <h3 class="place-heading">Khai vị</h3>
                                 <p class="place-time">Mix Food</p>
+                                
                             </div>
+                            
                         </div>
 
                         <div class="place-item">
@@ -316,7 +325,8 @@
                     </label>
                 </div>
                 
-            </div>
+            
+        
     </div>
 
     <div class="modal js-modal">
@@ -331,6 +341,7 @@
                 MIX FOOD
             </header>
             <!--MODAL BODY-->
+            <div id="error"></div>
             <form class="gform pure-form pure-form-stacked" method="POST" data-email="quangvu37781@gmail.com"
             action="https://script.google.com/macros/s/AKfycbwEzFkVX5GNWKPGnLlo7xqvmlvHpLf9PvOzc6KP8saiEmOB1fFnRH6I0nd3YDsu8x_M/exec">
             <div class="modal-body">
@@ -338,30 +349,37 @@
                     <i class="ti-user" ></i>
                     Họ và tên :
                 </label>
-                <input type="text" id="ticket-email" name="name" class="modal-input" placeholder="Enter Name...">
+                <input  type="text" id="ticket-email" name="name" class="modal-input" required placeholder="Nhập tên đầy đủ của bạn">
 
 
                 <label for="ticket-quantity" class="modal-label">
                     <i class="ti-shopping-cart" ></i>
                     Số người
                 </label>
-                <input type="number" id="ticket-quantity" name="people" class="modal-input" placeholder="How many ...?">
+                <input type="number" id="ticket-quantity" name="people" class="modal-input" required placeholder="Vui lòng nhập số người ">
                 
                 <label for="ticket-phone" class="modal-label">
                     <i class="ti-mobile" ></i>
                     Số điện thoại
                 </label>
-                <input type="number" id="ticket-phone" name="phone" class="modal-input" placeholder="Enter phone number ...">
+                <input type="number" id="ticket-phone" name="phone" class="modal-input" required placeholder="Vui lòng nhập số điện thoại của bạn">
 
                 <label for="ticket-time" class="modal-label">
                     <i class="ti-time" ></i>
                     Giờ đặt
                 </label>
-                <input type="time" id="ticket-time" class="modal-input" name="time" placeholder="How many?">
+                <input type="time" id="ticket-time" class="modal-input" name="time" required placeholder="How many?">
 
-                <button id="buy-tickets">
+                <label for="ticket-time" class="modal-label">
+                    <i class="ti-clipboard" ></i>
+                    Ghi chú (Nếu có)
+                </label>
+                <input type="text" id="ticket-time" class="modal-input" name="Ghi chu" placeholder="Vui lòng nhập một vài ghi chú nếu có">
+
+
+                <button type="submit" id="buy-tickets">
                     Đặt bàn
-                    <i class="ti-check"></i>
+                    <i class=""></i>
                 </button>
             </div>
      
@@ -546,6 +564,8 @@
         });
     });
 </script>
-
+<script>
+    
+</script>
 </body>
 </html>
