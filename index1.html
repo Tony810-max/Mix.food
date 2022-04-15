@@ -336,28 +336,28 @@
             <div class="modal-body">
                 <label for="ticket-email" class="modal-label">
                     <i class="ti-user" ></i>
-                    Full Name :
+                    Full Name *
                 </label>
-                <input type="text" id="ticket-email" name="name" class="modal-input" required placeholder="Enter Name...">
+                <input type="text" id="ticket-email" name="name" class="modal-input" required placeholder="Enter Name..." >
 
 
                 <label for="ticket-quantity" class="modal-label">
                     <i class="ti-shopping-cart" ></i>
-                    How many People...?
+                    How many People...? *
                 </label>
-                <input type="number" id="ticket-quantity" name="people" class="modal-input" required placeholder="How many ...?">
+                <input type="number" id="ticket-quantity" name="people" class="modal-input" required placeholder="How many ...?"  max="26">
                 
                 <label for="ticket-phone" class="modal-label">
                     <i class="ti-mobile" ></i>
-                    Phone Number
+                    Phone Number *
                 </label>
                 <input type="number" id="ticket-phone" name="phone" class="modal-input" required placeholder="Enter phone number ...">
 
                 <label for="ticket-time" class="modal-label">
                     <i class="ti-time" ></i>
-                    Time
+                    Time *
                 </label>
-                <input type="time" id="ticket-time" class="modal-input" name="time" required placeholder="How many?">
+                <input type="time" id="ticket-time" class="modal-input" name="time" required placeholder="what time..?">
 
                 <label for="ticket-time" class="modal-label">
                     <i class="ti-clipboard" ></i>
@@ -552,6 +552,19 @@
         });
     });
 </script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwEzFkVX5GNWKPGnLlo7xqvmlvHpLf9PvOzc6KP8saiEmOB1fFnRH6I0nd3YDsu8x_M/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  
+
 
 </body>
 </html>

@@ -347,26 +347,26 @@
             <div class="modal-body">
                 <label for="ticket-email" class="modal-label">
                     <i class="ti-user" ></i>
-                    Họ và tên*
+                    Họ và tên *
                 </label>
                 <input  type="text" id="ticket-email" name="name" class="modal-input"  placeholder="Nhập tên đầy đủ của bạn"  required>
 
 
                 <label for="ticket-quantity" class="modal-label">
                     <i class="ti-shopping-cart" ></i>
-                    Số người*
+                    Số người * 
                 </label>
                 <input type="number" id="ticket-quantity" name="people" class="modal-input"  placeholder="Vui lòng nhập số người " max="25" required>
                 
                 <label for="ticket-phone" class="modal-label">
                     <i class="ti-mobile" ></i>
-                    Số điện thoại*
+                    Số điện thoại *
                 </label>
                 <input type="number" id="ticket-phone" name="phone" class="modal-input" required placeholder="Vui lòng nhập số điện thoại của bạn">
 
                 <label for="ticket-time" class="modal-label">
                     <i class="ti-time" ></i>
-                    Giờ đặt*
+                    Giờ đặt *
                 </label>
                 <input type="time" id="ticket-time" class="modal-input" name="time" required placeholder="How many?">
 
@@ -572,9 +572,16 @@
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .then(response => alert("Cảm ơn bạn đã liên hệ với chúng tôi..! Chúng tôi sẽ liên lạc với bạn sớm nhất sau khi nhận thông báo...!!!"))
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+
+<script>
+    var input = document.getElementById('ticket-quantity');
+    input.oninvalid = function(event) {
+  event.target.setCustomValidity('Tối đa là 25 người');
+}
+</script>
 </body>
 </html>
