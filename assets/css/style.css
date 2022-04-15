@@ -693,6 +693,13 @@ a.button.L-en{
     
     color:#fff;
     padding: 5px 5px;
-    
-
 }
+
+/* css form error */
+input:invalid {
+    border-color: red;
+}
+input,
+input:valid {
+    border-color: #ccc;
+} 

@@ -343,30 +343,30 @@
             <!--MODAL BODY-->
             <div id="error"></div>
             <form class="gform pure-form pure-form-stacked" method="POST" data-email="quangvu37781@gmail.com"
-            action="https://script.google.com/macros/s/AKfycbwEzFkVX5GNWKPGnLlo7xqvmlvHpLf9PvOzc6KP8saiEmOB1fFnRH6I0nd3YDsu8x_M/exec">
+            action="https://script.google.com/macros/s/AKfycbwEzFkVX5GNWKPGnLlo7xqvmlvHpLf9PvOzc6KP8saiEmOB1fFnRH6I0nd3YDsu8x_M/exec"  name="google-sheet">
             <div class="modal-body">
                 <label for="ticket-email" class="modal-label">
                     <i class="ti-user" ></i>
-                    Họ và tên :
+                    Họ và tên*
                 </label>
-                <input  type="text" id="ticket-email" name="name" class="modal-input" required placeholder="Nhập tên đầy đủ của bạn">
+                <input  type="text" id="ticket-email" name="name" class="modal-input"  placeholder="Nhập tên đầy đủ của bạn"  required>
 
 
                 <label for="ticket-quantity" class="modal-label">
                     <i class="ti-shopping-cart" ></i>
-                    Số người
+                    Số người*
                 </label>
-                <input type="number" id="ticket-quantity" name="people" class="modal-input" required placeholder="Vui lòng nhập số người ">
+                <input type="number" id="ticket-quantity" name="people" class="modal-input"  placeholder="Vui lòng nhập số người " max="25" required>
                 
                 <label for="ticket-phone" class="modal-label">
                     <i class="ti-mobile" ></i>
-                    Số điện thoại
+                    Số điện thoại*
                 </label>
                 <input type="number" id="ticket-phone" name="phone" class="modal-input" required placeholder="Vui lòng nhập số điện thoại của bạn">
 
                 <label for="ticket-time" class="modal-label">
                     <i class="ti-time" ></i>
-                    Giờ đặt
+                    Giờ đặt*
                 </label>
                 <input type="time" id="ticket-time" class="modal-input" name="time" required placeholder="How many?">
 
@@ -374,10 +374,10 @@
                     <i class="ti-clipboard" ></i>
                     Ghi chú (Nếu có)
                 </label>
-                <input type="text" id="ticket-time" class="modal-input" name="Ghi chu" placeholder="Vui lòng nhập một vài ghi chú nếu có">
+                <input type="text" id="ticket-time" class="modal-input" name="Ghi chu" placeholder="Vui lòng nhập một vài ghi chú nếu có" value="Không có">
 
 
-                <button type="submit" id="buy-tickets">
+                <button type="submit" id="buy-tickets" name="submit">
                     Đặt bàn
                     <i class=""></i>
                 </button>
@@ -564,8 +564,17 @@
         });
     });
 </script>
+<!--Xu li form submit-->
 <script>
-    
-</script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwEzFkVX5GNWKPGnLlo7xqvmlvHpLf9PvOzc6KP8saiEmOB1fFnRH6I0nd3YDsu8x_M/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
