@@ -217,8 +217,7 @@
             </header>
             
             <div class="modal-body">
-                <form class="gform pure-form pure-form-stacked" method="POST" data-email="quangvu37781@gmail.com"
-                action="https://script.google.com/macros/s/AKfycbwEzFkVX5GNWKPGnLlo7xqvmlvHpLf9PvOzc6KP8saiEmOB1fFnRH6I0nd3YDsu8x_M/exec"  name="google-sheet">
+                <form action="">
                 <label for="ticket-email" class="modal-label">
                     <i class="ti-user" ></i>
                     Họ và tên
@@ -257,7 +256,7 @@
 
         </div>
     </div>
- <!--Xy ly form -->
+
     <script>
         
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
@@ -295,8 +294,8 @@
         
 
 
-        
-     /*   var header = document.getElementById('header')
+      /*  
+        var header = document.getElementById('header')
         var mobileMenu = document.getElementById('mobile-menu')
         var headerHeight = header.clientHeight;
 
@@ -474,7 +473,7 @@
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => alert("Cảm ơn bạn đã đặt bàn bên chúng tôi..! Chúng tôi sẽ liên lạc với bạn sớm nhất sau khi nhận thông báo...!!!"))
+            .then(response => alert("Cảm ơn bạn đã liên hệ với chúng tôi..! Chúng tôi sẽ liên lạc với bạn sớm nhất sau khi nhận thông báo...!!!"))
             .catch(error => console.error('Error!', error.message))
         })
       </script>
