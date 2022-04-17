@@ -158,7 +158,7 @@
                                     <input type="text" name="" placeholder="Message" required id="" class="form-control">
                                 </div>
                             </div>
-                            <input class="pull-right btn mt-16 s-full-width" type="submit" value="SEND">
+                            <input class="pull-right btn mt-16 s-full-width" type="submit" value="GỬI">
                         </form>
                     </div>
                 </div>
@@ -217,7 +217,8 @@
             </header>
             
             <div class="modal-body">
-                <form action="">
+                <form class="gform pure-form pure-form-stacked" method="POST" data-email="quangvu37781@gmail.com"
+            action="https://script.google.com/macros/s/AKfycbwEzFkVX5GNWKPGnLlo7xqvmlvHpLf9PvOzc6KP8saiEmOB1fFnRH6I0nd3YDsu8x_M/exec" name="google-sheet">
                 <label for="ticket-email" class="modal-label">
                     <i class="ti-user" ></i>
                     Họ và tên
@@ -229,7 +230,7 @@
                     <i class="ti-shopping-cart" ></i>
                     Số người 
                 </label>
-                <input type="text" id="ticket-quantity" name="people" class="modal-input" required  placeholder="Vui lòng nhập số người " max="25" required>
+                <input type="number" id="ticket-quantity" name="people" class="modal-input" required  placeholder="Vui lòng nhập số người " max="25" required>
                 
                 <label for="ticket-phone" class="modal-label">
                     <i class="ti-mobile" ></i>
@@ -294,7 +295,7 @@
         
 
 
-      /*  
+       
         var header = document.getElementById('header')
         var mobileMenu = document.getElementById('mobile-menu')
         var headerHeight = header.clientHeight;
@@ -324,7 +325,7 @@
                 }
             }
         }
-
+/*
         var datban = document.querySelector('.js-dat-ban')
         var inputName = document.querySelector('js-input-name')
         datban.onclick = function(){
