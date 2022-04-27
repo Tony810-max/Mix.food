@@ -1,4 +1,6 @@
-
+body{
+    background-image: url(./assets/img/Menu/mixfood.png);
+}
 @media (max-width:1023){   
     .btn{
         padding: 18px 20px;
@@ -172,3 +174,6 @@
         margin-top: 16px;
     }
 }
+
+/*xu li reponsive review */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
